@@ -1,4 +1,4 @@
 framework:
     mailer:
-        envelope:
-            recipients: ['marcomarziale@hotmail.it']
+        dsn: '%env(MAILER_DSN)%'
+

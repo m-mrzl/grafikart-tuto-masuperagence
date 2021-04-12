@@ -12,7 +12,6 @@ class ContactNotification
 
 
     /**
-     * @Route("/email")
      * @param MailerInterface $mailer
      * @return Response
      */

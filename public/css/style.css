@@ -9,3 +9,7 @@ body nav  {
 }
 
 
+body {
+    background-image: url(../images/properties/bgtest.jpg);
+    background-size: cover;
+}

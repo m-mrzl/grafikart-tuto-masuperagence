@@ -6,7 +6,7 @@
     {% endif %}
     <div class="card-body">
         <h5 class="card-title">
-            <a href="{{ path('property.show', {slug: property.slug, id: property.id}) }}">
+            <a style="text-decoration: none" href="{{ path('property.show', {slug: property.slug, id: property.id}) }}">
                 {{ property.title }}
             </a>
         </h5>
@@ -15,5 +15,8 @@
         <div class="text-primary" style="font-size: 2rem; font-weight: bold" >
             {{ property.formattedPrice }} €
         </div>
+        <a href="{{ path('property.show', {id: property.id, slug: property.slug}) }}" class="btn btn-primary" role="button" style="text-decoration: none; margin-left: 85px;">Voir plus ...</a>
+
     </div>
+
 </div>

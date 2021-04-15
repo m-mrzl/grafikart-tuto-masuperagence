@@ -1,0 +1,54 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Newsletter{% endblock %}
+
+{% block body %}
+
+
+
+    {% block stylesheets %}
+        <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link rel="stylesheet" href="{{ asset('css/stylenews.css') }}">
+        <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+    {% endblock %}
+<body>
+<form action="">
+<div class="back">
+    <a class="btn text-white" onclick="popupToggle();">Newsletter</a>
+    <div id="popup">
+        <div class="content">
+            <img src="./{{ asset('/images/properties/email.png') }}" alt="email">
+            <h2>Abonnez vous</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur
+                adipisicing elit. Voluptates similique
+                molestiae quidem odit facilis dolore?
+            </p>
+            <div class="inputBox ">
+                <input type="email" placeholder=" Votre adresse email">
+            </div>
+            <div class="inputBox">
+                <a href="{{ path('home') }}">
+                    <input  type="button" value="Inscrivez vous" class="btn">
+                </a>
+            </div>
+        </div>
+        <a class="close" onclick="popupToggle();"><img src="./{{ asset('/images/properties/close.png') }}" alt="Close"></a>
+    </div>
+
+    {% block javascripts %}
+    <script>
+        function popupToggle(){
+            const popup = document.getElementById('popup');
+            popup.classList.toggle('active')
+        }
+    </script>
+    {% endblock %}
+</div>
+</form>
+</body>
+
+{% endblock %}
